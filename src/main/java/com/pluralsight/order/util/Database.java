@@ -53,7 +53,7 @@ public class Database {
      * @throws SQLException In case of a database error
      */
     public Connection getConnection() throws SQLException {
-        Connection connection = DriverManager.getConnection("jdbc:h2:mem:orders;DB_CLOSE_DELAY=-1\"","sa","");;
+        Connection connection = DriverManager.getConnection("jdbc:h2:mem:orders;DB_CLOSE_DELAY=-1","sa","");;
 
         if(!isInitialized && connection != null) {
             initializeDatabase(connection);
